@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VIEW DATA</title>
+    <link rel="stylesheet" href="static\css\s.css" />
+    <link rel="stylesheet" href="static\css\style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <img src="static\images\th.jpg" alt="Logo" width="300" height="100" />
+      <ul class="nav-links">
+        <li><a href="index">Home</a></li>
+        <li><a href="contact">Contact</a></li>
+        <li class="dropdown">
+          <div class="dropbtn" id="loginBtn">Login</div>
+          <div class="dropdown-content" id="myDropdown">
+            <a href="login">Student</a>
+            <a href="login">Faculty</a>
+            <a href="login">Admin</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    
+    <!-- Login Section -->
+    <section>
+      <h2>VIEW ALL REGISTRATIION</h2>
+      <table>
+        <tr>
+          <th>NAME</th>
+          <th>EMAIL</th>
+          <th>USERNAME</th>
+          <th>PASSWORD</th>
+          <th>ROLE</th>
+        </tr>
+        {% for i in range(0, l+1)) %}
+        <tr>
+          
+
+          <td>{{info['NAME']}}</td>
+          <td>{{EMAIL}}</td>
+          <td>{{USERNAME}}</td>
+          <td>{{PASSWORD}}</td>
+          <td>{{ROLl}}</td>
+          
+        </tr>
+        {% endfor %}
+      </table>
+    </section>
+
+    <script src="static\scripts\script.js"></script>
+  </body>
+</html>
